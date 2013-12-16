@@ -775,6 +775,20 @@
 }).call(this);
 
 (function() {
+  Formbuilder.registerField('submit', {
+    order: 101,
+    view: "<input type='submit' value='<%= rf.get(Formbuilder.options.mappings.LABEL) %>' />",
+    edit: "",
+    addButton: "<span class='symbol'><span class='fa fa-chevron-circle-right'></span></span> Submit Button",
+//    defaultAttributes: function(attrs) {
+//      attrs.field_options.label = 'Submit';
+//      return attrs;
+//    }
+  });
+
+}).call(this);
+
+(function() {
   Formbuilder.registerField('text', {
     order: 0,
     view: "<input type='text' class='rf-size-<%= rf.get(Formbuilder.options.mappings.SIZE) %>' />",
